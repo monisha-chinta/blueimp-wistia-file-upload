@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-12 col-md-offset-3 well well-lg custom-well">
+    <div class="row">
+      <div ng-show="!videoSrc" class="col-md-12 col-md-offset-5 custom-row ng-hide">
+        <div ng-show="!showProgressBar && !videoSrc" class="ng-hide">
+          <form  enctype="multipart/form-data" data-file-upload>
+            <span class="btn btn-success fileinput-button" ng-class="{disabled: disabled}">
+              <i class="glyphicon glyphicon-upload"></i>
+              <span>Upload</span>
+              <input class="blueimp-wistia-file-upload"
+              type="file"
+              name="files[]"
+              upload
+              accept="video/mp4,video/x-m4v,video/*">
+            </span>
+          </form>
+        </div>
+        <div ng-show="showProgressBar" class="ng-hide">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar"  aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width: {{percentage + '%'}}; vertical-align: center;">
+              {{percentage +'%'}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div ng-show="videoSrc">
+        <iframe src="{{videoSrc}}" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="360"></iframe>
+      </div>
+    </div>
+    <div class="row">
+      <div ng-show"error" class="col-md-12 error">
+        {{error}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div ng-show="videoSrc" class="col-md-12 col-md-offset-3 ng-hide">
+    <button class="btn btn-success" ng-click="$ctrl.uploadMore()">Upload More</button>
+  </div>
+</div>

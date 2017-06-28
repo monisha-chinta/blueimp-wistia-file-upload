@@ -1,0 +1,22 @@
+.progress {
+  height: 30px;
+  width: 70px;
+}
+
+.custom-well {
+  height: 410px;
+  width: 690px;
+  padding-left: 40px;
+  padding-right: 30px;
+}
+
+.custom-row{
+  padding-top: 25%;
+}
+
+.error {
+  text-align: center;
+  padding-top: 20px;
+  font-family: monospace;
+  color: crimson;
+}
