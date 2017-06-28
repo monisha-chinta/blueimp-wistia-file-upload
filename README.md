@@ -8,6 +8,7 @@ Clone the repository
 
 Install local NPM packages
 
+    cd blueimp-wistia-file-upload
     npm install
 
 
@@ -17,7 +18,10 @@ Set Wistia access password in services/apiToken.js
 
 Run Express server
 
-* This server runs on port: 3001
+    node expressServer.js
+
+    * This server runs on port: 3001
+    * Open localhost:3001 to view the page
 
 
 
